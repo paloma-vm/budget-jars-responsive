@@ -1,10 +1,11 @@
 {
   "name": "budget-jars-responsive",
   "version": "1.0.0",
-  "description": "Spring Intensive March 2023",
-  "main": "main.js",
+  "description": "Final project ACS 2330",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
   },
   "keywords": [],
   "author": "",
