@@ -1,0 +1,237 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+     Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+
+ul {
+    display: flex;
+    gap: 2em;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none; 
+}
+
+a:active {
+    font-weight: bold;
+    text-decoration-line: underline; 
+}
+
+ul {
+    list-style-type: none;
+}
+
+.header-title {
+    display: flex;
+    justify-content: center;
+    padding: 0.5em;
+}
+
+img {
+    max-width: 100%;
+}
+
+.jars {
+    display: flex;
+    gap: 1em;
+    margin: auto;
+    /* position: relative;
+    text-align: center; */
+    padding: 50px;
+}
+
+.jar {
+  
+    position: relative;
+    box-sizing: border-box;
+    /* text-align: center; */
+}
+
+.jarDiv {
+  
+    position: relative;
+    /* text-align: center; */
+}
+
+.display-label {
+    left: 0;
+    position: absolute;
+    top: 40%;
+    bottom: 60%;
+    /* max-width: 85%; */
+    text-align: center;
+    width: 100%;
+}
+
+.display-startBal {
+    left: 0;
+    position: absolute;
+    top: 7%;
+    bottom: 50%;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+}
+
+.display-currentBal {
+    left: 0;
+    position: absolute;
+    top: 50%;
+    bottom: 40%;
+    text-align: center;
+    width: 100%;
+}
+
+.display-original {
+    left: 0;
+    position: absolute;
+    top: 0%;
+    bottom: 90%;
+    text-align: center;
+    width: 100%;
+}
+
+.startLevel-wrapper {
+    left: 0;
+    position: absolute;
+    /* background-color: yellow; */
+    bottom: 3%; /* makes it so the jars look emptier as money is spent */
+    width: 100%;
+    height: 70%;
+    border-radius: 2em;
+}
+
+.startLevel {
+    left: 2%;
+    position: absolute;
+    background-color: rgba(115, 229, 86, 0.44);
+    bottom: 0%; /* makes it so the jars look emptier as money is spent */
+    width: 96%;
+    height: 80%;
+    border-radius: 0 0 3.5em 3.5em;
+}
+
+.highlight {
+    background-color: chartreuse;
+}
+
+.btn {
+    background-color: #f1f1f1;
+}
+
+.active, .btn:hover {
+    /* background-color: #89e1ec; */
+    border: 2px dashed black;
+    
+}
+
+button {
+    width: 80px;
+    height: 45px;
+    
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1em;
+    
+}
+.add-sub {
+    font-size: xx-large;
+    border-radius: 10px;
+    width: 70px;
+    height: 45px;
+    background-color: lightgray;
+
+}
+
+.select-jar {
+    font-size: large;
+    display: flex;
+    gap: 1.5em;
+    justify-content: center;
+    align-items: center;
+}
+
+.options {
+    font-size: 2em;
+    width: 300px;
+    padding: 0.5em;
+}
+
+option {
+    font-size: 2em;
+}
+
+input {
+    font-size: medium;
+    padding: 0.5em;
+    border-left: 1px solid lightgray;
+    border-right: 0;
+    border-bottom: 0;
+    border-top: 0;
+   
+}
+
+.amt {
+    font-size: large;
+    padding: 0.5em;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+}
+
+footer {
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    font-size: small;
+}
+
+.footer-main {
+    position: fixed;
+    bottom: 0;
+    left: 40%;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.BudgetForm {
+    margin-left: 100px;
+}
+
+.row {
+    width: 38%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid lightgrey;
+    border-bottom: 0;
+
+}
+
+.row > label {
+    padding-left: 0.5em;
+}
+
+.bottom-row {
+    border-bottom: 1px solid lightgrey;
+}
+
+/* .jar-money {
+   
+} */
+.about {
+    width: 50%;
+    margin: auto;
+    font-size: 1.5em;
+    padding-top: 1em;
+}
+

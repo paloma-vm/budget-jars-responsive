@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Jars</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="form.html">Get Started</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <h1 class="header-title">Budget Jars</h1>
+        </nav>
+    </header>
+    <!-- ---------------------------------------------------------- -->
+    <div class="jars" id="jars"></div>
+    <!-- ---------------------------------------------------------- -->
+    <div class="manage" id="manage">
+        <form class="select-jar">
+            <label>Choose a jar:</label>
+            <select class="options" id="category">
+             <!-- see script -->
+            </select>
+            <label>Amount</label>
+            <input class="amt" type="number" id="amt">
+            <div class="buttons">
+                <button class='add-sub'id="depositButton"> + </button>
+                <button class='add-sub'id="spendButton"> - </button>
+            </div>
+        </form>
+      
+    </div>
+    <!-- ---------------------------------------------------------- -->
+
+    <footer class="footer-main">
+        <ul>
+            <li>Paloma Valdez-Marsh</li>
+            <li>2023</li>
+        </ul>
+
+    </footer>
+    <script src="main.js" type="module"></script>
+</body>
+</html>

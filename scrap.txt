@@ -1,0 +1,97 @@
+import React from 'react';
+import './BudgetForm.css';
+import { useState } from 'react';
+
+
+function BudgetForm() {
+  // total income
+  const [netIncome1, setNetIncome1] = useState('')
+  const [netIncome2, setNetIncome2] = useState('')
+  const [rentalIncome, setRentalIncome] = useState('')
+  const [spousalChild, setSpousalChild] = useState('')
+  const [govtBenefits, setGovtBenefits] = useState('')
+  const [otherIncome, setOtherIncome] = useState('')
+  // fixed expenses
+  const [mortgage, setMortgage] = useState('')
+  const [propertyTax, setpropertyTax] = useState('')
+  const [electricity, setElectricity] = useState('')
+  const [gasWater, setGasWater] = useState('')
+  const [maintenanceFees, setMaintenanceFees] = useState('')
+  const [cable, setCable] = useState('')
+  const [phone1, setPhone1] = useState('')
+  const [phone2, setPhone2] = useState('')
+  const [internet, setInternet] = useState('')
+  const [homeInsurance, setHomeInsurance] = useState('')
+  const [car1, setCar1] = useState('')
+  const [car2, setCar2] = useState('')
+  const [carInsRegn, setCarInsRegn] = useState('')
+  const [childcare, setChildcare] = useState('')
+  const [lifeHealthIns, setLifeHealthIns] = useState('')
+  // variable expenses
+  const [allowances, setAllowances] = useState('')
+  const [gasOil, setGasOil] = useState('')
+  const [carRepairs, setCarRepairs] = useState('')
+  const [publicTranspo, setPublicTranspo] = useState('')
+  const [taxi, setTaxi] = useState('')
+  const [parking, setParking] = useState('')
+  const [medicalDental, setMedicalDental] = useState('')
+  const [groceries, setGroceries] = useState('')
+  const [restaurant, setrestaurant] = useState('')
+  const [clothes, setClothes] = useState('')
+  const [entertainment, setEntertainment] = useState('')
+  const [pet, setPet] = useState('')
+  const [familyGifts, setFamilyGifts] = useState('')
+  const [vacation, setVacation] = useState('')
+  const [hobby, setHobby] = useState('')
+  const [sports, setSports] = useState('')
+  const [clubUnion, setClubUnion] = useState('')
+  const [charity, setCharity] = useState('')
+  const [bankFees, setBankFees] = useState('')
+  const [taxes, setTaxes] = useState('')
+  const [debtRepayment, setDebtRepayment] = useState('')
+  const [emergencyFund, setEmergencyFund] = useState('')
+  const [educationSavings, setEducationSavings] = useState('')
+  const [retirementSavings, setRetirementSavings] = useState('')
+
+    return (
+    <div className="Jars">
+			{jars}
+			{jars}
+			<img src='../../empty-jar.png' width='200' height='200' alt=''/>
+			fdfdss
+			<div>{`${display}`}</div>
+			<div id='items'>
+
+			</div>
+
+				<img src={empty_jar} alt=''/>
+				{/* <h3 className='jar-label'>{jar.label}</h3> */}
+				{/* <div className='jar-amount'>{jar.amount}</div> */}
+			
+    </div>
+  )
+}
+
+export default Main
+
+
+// tried this: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_active_element2
+// loop through the jar div and add the active class to the currently selected div
+for (let i = 0; i < allJars.length; i += 1) {
+  allJars[i].addEventListener('click', function() {
+    const current = document.getElementsByClassName('active');
+
+    // if there is no active class
+    if (current.length > 0) {
+      current[0].className = current[0].className.replace(' active', '');
+      // current[0].className = current[0].classList.toggle('highlight')
+      // current[0].className = current[0].classList.toggle(' active')
+
+    }
+
+    // add the active class to the currently selected div, if you are switching which div is active
+    this.className += ' active';
+    // this.classList.toggle('highlight');
+
+  });
+}

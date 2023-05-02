@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Jars</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="form.html">Get Started</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <h1 class="header-title">Budget Jars</h1>
+        </nav>
+    </header>
+    <form class='BudgetForm' id="BudgetForm">
+      <h2>
+        Please enter monthly amounts in the blank spaces.<br> 
+        If an item does not apply, please leave the space blank.
+      </h2>
+
+      <h3>Total Income</h3>
+        <div class='row'>
+          <label>Net income #1</label>
+          <input
+            type="number"
+            name="netIncome1"
+          />
+        </div>
+        <div class='row'>
+          <label>Net income #2</label>
+          <input
+            type="number"
+            name="netIncome2"
+            id={netIncome2}
+          />
+        </div>
+        <div class='row'>
+          <label>Rental income</label>
+          <input
+            type="number"
+            name="rentalIncome"
+            id="rentalIncome"
+          />
+        </div>
+        <div class='row'>
+          <label>Spousal/Child Support</label>
+          <input
+            type="number"
+            name="spousalChild"
+            id={spousalChild}
+          />
+        </div>
+        <div class='row'>
+          <label>Government Benefits</label>
+          <input
+            type="number"
+            name="govtBenefits"
+            id={govtBenefits}
+          />
+        </div>
+        <div class='row bottom-row'>
+          <label>Other income</label>
+          <input
+            type="number"
+            name="otherIncome"
+          />
+        </div>
+
+      <h3>Fixed Expenses</h3>
+        <div class='row'>
+          <label>Mortgage or Rent</label>
+          <input
+            type="number"
+            name="mortgage"
+            id={mortgage}
+          />
+        </div>
+        <div class='row'>
+          <label>Property Tax</label>
+          <input
+            type="number"
+            name="propertyTax"
+            id={propertyTax}
+          />
+        </div>
+        <div class='row'>
+          <label>Electricity</label>
+          <input
+            type="number"
+            name="electricity"
+            id={electricity}
+          />
+        </div>
+        <div class='row'>
+          <label>Gas and Water</label>
+          <input
+            type="number"
+            name="gasWater"
+            id={gasWater}
+          />
+        </div>
+        <div class='row'>
+          <label>Maintenance Fees</label>
+          <input
+            type="number"
+            name="maintenanceFees"
+            id={maintenanceFees}
+          />
+        </div>
+        <div class='row'>
+          <label>Cable</label>
+          <input
+            type="number"
+            name="cable"
+            id={cable}
+          />
+        </div>
+        <div class='row'>
+          <label>Phone #1</label>
+          <input
+            type="number"
+            name="phone1"
+            id={phone1}
+          />
+        </div>
+        <div class='row'>
+          <label>Phone #2</label>
+          <input
+            type="number"
+            name="phone2"
+            id={phone2}
+          />
+        </div>
+        <div class='row'>
+          <label>Internet</label>
+          <input
+            type="number"
+            name="internet"
+            id={internet}
+          />    
+        </div>
+        <div class='row'>
+          <label>Home Insurance</label>
+          <input
+            type="number"
+            name="homeInsurance"
+            id={homeInsurance}
+          />
+        </div>
+        <div class='row'>
+          <label>Childcare</label>
+          <input
+            type="number"
+            name="childcare"
+            id={childcare}
+          />
+        </div>
+        <div class='row'>
+          <label>Car #1</label>
+          <input
+            type="number"
+            name="car1"
+            id={car1}
+          />
+        </div>
+        <div class='row'>
+          <label>Car #2</label>
+          <input
+            type="number"
+            name="car2"
+            id={car2}
+          />
+        </div>
+        <div class='row'>
+          <label>Car insurance and registration</label>
+          <input
+            type="number"
+            name="carInsRegn"
+            id={carInsRegn}
+          />    
+        </div>
+        <div class='row bottom-row'>
+          <label>Life and Health Insurance</label>
+          <input
+            type="number"
+            name="lifeHealthIns"
+            id={lifeHealthIns}
+          />  
+        </div>
+
+      <h3>Variable Expenses</h3>
+        <div class='row'>
+          <label>Allowances</label>
+          <input
+            type="number"
+            name="allowances"
+            id={allowances}
+          />
+        </div>
+        <div class='row'>
+          <label>Gas/oil</label>
+          <input
+            type="number"
+            name="gasOil"
+            id={gasOil}
+          />
+        </div>
+        <div class='row'>
+          <label>Car repairs</label>
+          <input
+            type="number"
+            name="carRepairs"
+            id="carRepairs"
+          />
+        </div>
+        <div class="row">
+          <label>Public transportation</label>
+          <input
+            type="number"
+            name="publicTranspo"
+            id="publicTranspo"
+          />
+        </div>
+        <div class='row'>
+          <label>Taxi</label>
+          <input
+            type="number"
+            name="taxi"
+            id="taxi"
+          />  
+        </div>
+        <div class='row'>
+          <label>Parking</label>
+          <input
+            type="number"
+            name="parking"
+            id="parking"
+          />
+        </div>
+        <div class='row'>
+          <label>Medical & Dental</label>
+          <input
+            type="number"
+            name="medicalDental"
+            id="medicalDental"
+          />
+        </div>
+        <div class='row'>
+          <label>Groceries</label>
+          <input
+            type="number"
+            name="groceries"
+            id="groceries"
+          />
+        </div>
+        <div class='row'>
+          <label>Restaurant</label>
+          <input
+            type="number"
+            name="restaurant"
+            id="restaurant"
+          />
+        </div>
+        <div class='row'>
+          <label>Clothes</label>
+          <input
+            type="number"
+            name="clothes"
+            id="clothes"
+          />
+        </div>
+        <div class='row'>
+          <label>Entertainment </label>
+          <input
+            type="number"
+            name="entertainment"
+            id="entertainment"
+          />
+        </div>
+        <div class='row'>
+          <label>Pet</label>
+          <input
+            type="number"
+            name="pet"
+            id="pet"
+          />
+        </div>
+        <div class='row'>
+          <label>Family & gifts</label>
+          <input
+            type="number"
+            name="familyGifts"
+            id="familyGifts"
+          />
+        </div>
+        <div class='row'>
+          <label>Vacation</label>
+          <input
+            type="number"
+            name="vacation"
+            id="vacation"
+          />
+        </div>
+        <div class='row'>
+          <label>Hobby</label>
+          <input
+            type="number"
+            name="hobby"
+            id="hobby"
+          />
+        </div>
+        <div class='row'>
+          <label>Sports</label>
+          <input
+            type="number"
+            name="sports"
+            id="sports"
+          />
+        </div>
+        <div class='row'>
+          <label>Club/Union</label>
+          <input
+            type="number"
+            name="clubUnion"
+            id="clubUnion"
+          />
+        </div>
+        <div class='row'>
+          <label>Charity</label>
+          <input
+            type="number"
+            name="charity"
+            id="charity"
+          />
+        </div>
+        <div class='row'>
+          <label>Bank fees</label>
+          <input
+            type="number"
+            name="bankFees"
+            id="bankFees"
+          />
+        </div>
+        <div class='row'>
+          <label>Taxes</label>
+          <input
+            type="number"
+            name="taxes"
+            id="taxes"
+          />
+        </div>
+        <div class='row'>
+          <label>Debt repayment</label>
+          <input
+            type="number"
+            name="debtRepayment"
+            id="debtRepayment"
+          />
+        </div>
+        <div class='row'>
+          <label>Emergency fund</label>
+          <input
+            type="number"
+            name="emergencyFund"
+            id="emergencyFund"
+          />
+        </div>
+        <div class='row'>
+          <label>Education Savings</label>
+          <input
+            type="number"
+            name="educationSavings"
+            id="educationSavings"
+          />
+        </div>
+        <div class='row'>
+          <label>Retirement savings</label>
+          <input
+            type="number"
+            name="retirementSavings"
+            id="retirementSavings"
+          />
+        </div>
+        <div class='row'>
+          <label>Total Expenses</label>
+          <input
+            type="number"
+            name="other"
+            id="other"
+          />
+        </div>
+        <div class='row bottom-row'>
+          <label>Income - Expenses</label>
+          <input
+            type="number"
+            name="other"
+            id="other"
+          />
+        </div>
+        <button type="submit" id="calc">Calculate</button>
+
+      <div class="jar-money">
+        <h3>JAR MONEY</h3>
+          <div class='row'>
+            <label>Transportation</label>
+            <input
+              type="number"
+              name="transportationAmt"
+              id="transportationAmt"
+            />
+          </div>
+          <div class='row'>
+            <label>Food</label>
+            <input
+              type="number"
+              name="foodAmt"
+              id="foodAmt"
+            />
+          </div>
+          <div class='row'>
+            <label>Entertainment</label>
+            <input
+              type="number"
+              name="entertainmentAmt"
+              id="entertainmentAmt"
+            />
+          </div>
+          <div class='row'>
+            <label>Clothes/Gifts</label>
+            <input
+              type="number"
+              name="clothesGiftsAmt"
+              id="clothesGiftsAmt"
+            />
+          </div>
+          <div class='row bottom-row'>
+            <label>Everything else</label>
+            <input
+              type="number"
+              name="everythingElseAmt"
+              id="everythingElseAmt"
+            />
+          </div>
+      </div>
+    </form>
+    <footer>
+        <ul>
+            <li>Paloma Valdez-Marsh</li>
+            <li>2023</li>
+        </ul>
+
+    </footer>
+    <script src="form.js"></script>
+</body>
+</html>
