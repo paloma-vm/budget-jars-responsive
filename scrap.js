@@ -39,3 +39,6 @@ function updateJars() {
   }
   
 }
+
+
+class="w-1/2 sm:w-max"

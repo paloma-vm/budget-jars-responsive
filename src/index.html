@@ -7,44 +7,48 @@
     <title>Budget Jars</title>
     <link href="../dist/output.css" rel="stylesheet">
 </head>
-<body class="bg-red-300">
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#" class="font-bold text-blue-600">Home</a></li>
-                <li><a href="form.html">Get Started</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-            <h1 class="text-blue-600">Budget Jars</h1>
-        </nav>
-    </header>
-    <!-- ---------------------------------------------------------- -->
-    <div class="jars" id="jars"></div>
-    <!-- ---------------------------------------------------------- -->
-    <div class="manage" id="manage">
-        <form class="select-jar">
-            <label>Choose a jar:</label>
-            <select class="options" id="category">
-             <!-- see script -->
-            </select>
-            <label>Amount</label>
-            <input class="amt" type="number" id="amt">
-            <div class="buttons">
-                <button class='add-sub'id="depositButton"> + </button>
-                <button class='add-sub'id="spendButton"> - </button>
+<body>
+    <main class="flex flex-col h-screen justify-between">
+        <div class="content">
+            <header>
+                <nav class="">
+                    <ul class="flex sm-flex-col gap-5 font-bold text-blue-600 p-3 bg-green-300 pl-6">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="form.html">Get Started</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                    <h1 class="text-slate-900 text-center text-3xl font-bold align-middle mt-4 mb-6">Budget Jars</h1>
+                </nav>
+            
+                <!-- <h1 class="text-blue-600 text-center text-3xl font-bold align-middle">Budget Jars</h1> -->
+            </header>
+            <!-- ---------------------------------------------------------- -->
+            <div class="flex flex-col gap-3 sm:flex sm:flex-row sm:space-x-5" id="jars"></div>
+            <!-- ---------------------------------------------------------- -->
+            <div class="manage" id="manage">
+                <form class="select-jar">
+                    <label>Choose a jar:</label>
+                    <select class="options" id="category">
+                     <!-- see script -->
+                    </select>
+                    <label>Amount</label>
+                    <input class="amt" type="number" id="amt">
+                    <div class="buttons">
+                        <button class='add-sub'id="depositButton"> + </button>
+                        <button class='add-sub'id="spendButton"> - </button>
+                    </div>
+                </form>
             </div>
-        </form>
-      
-    </div>
-    <!-- ---------------------------------------------------------- -->
+        </div>
+    <!-- FOOTER ---------------------------------------------------------- -->
+        <footer class="footer text-slate-50 bg-slate-900">
+            <ul class="container max-w-screen mx-auto items-center flex justify-between p-4">
+                <li>Paloma Valdez-Marsh</li>
+                <li>2023</li>
+            </ul>
 
-    <footer class="footer-main">
-        <ul>
-            <li>Paloma Valdez-Marsh</li>
-            <li>2023</li>
-        </ul>
-
-    </footer>
+        </footer>
+    </main>
     <script src="main.js" type="module"></script>
 </body>
 </html>
