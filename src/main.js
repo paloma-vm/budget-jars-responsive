@@ -73,10 +73,10 @@ function showJars() {
     const { label, startBal, currentBal } = jars[i]
     const startLevel = (1 - ((startBal - currentBal) / startBal)) * 100
 
-    jarsDisplay += `<div class='text-slate-900 text-center w-1/2 relative' id='jar-${i}'>
+    jarsDisplay += `<div class='text-slate-900 text-center relative flex justify-center' id='jar-${i}'>
       <img src='empty-jar.png'>
         <div class='startLevel-wrapper'>
-          <div class='startLevel' style='height: ${startLevel}%'></div>
+          <div class='bg-green-300 h-5/6' style='height: ${startLevel}%'></div>
         </div>
       <p class='absolute inset-5'>original balance:</p>
       <p class='absolute inset-10'>$${startBal}</p>

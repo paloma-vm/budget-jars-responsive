@@ -8,17 +8,17 @@
     <link href="/dist/output.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-          <ul>
+  <header>
+    <nav class="">
+        <ul class="flex sm-flex-col gap-5 font-bold text-blue-600 p-3 bg-green-300 pl-6">
             <li><a href="index.html">Home</a></li>
             <li><a href="form.html">Get Started</a></li>
             <li><a href="about.html">About</a></li>
         </ul>
-        <h1 class="header-title">Budget Jars</h1>
-        </nav>
-    </header>
-    <form class='BudgetForm' id="BudgetForm">
+        <h1 class="text-slate-900 text-center text-3xl font-bold align-middle mt-4 mb-6">Budget Jars</h1>
+    </nav>           
+</header>
+    <form class='[&_div]:grid [&_div]:grid-cols-2 [&_input]:col-span-1 [&_input]:border py-2 px-3 text-grey-darkest  [&_div_label]:col-span-1 border' id="BudgetForm">
       <h2>
         Please enter monthly amounts in the blank spaces.<br> 
         If an item does not apply, please leave the space blank.
@@ -30,6 +30,7 @@
           <input
             type="number"
             name="netIncome1"
+            class="border py-2 px-3 text-grey-darkest"
           />
         </div>
         <div class='row'>
@@ -38,14 +39,17 @@
             type="number"
             name="netIncome2"
             id={netIncome2}
+            class="border py-2 px-3 text-grey-darkest"
           />
         </div>
-        <div class='row'>
-          <label>Rental income</label>
+        <div class='grid grid-cols-3'>
+          <label
+          class="col-span-1">Rental income</label>
           <input
             type="number"
             name="rentalIncome"
             id="rentalIncome"
+            class="col-span-2"
           />
         </div>
         <div class='row'>
@@ -447,14 +451,13 @@
               id="everythingElseAmt"
             />
           </div>
-      </div>
+      <!-- </div> -->
     </form>
-    <footer>
-        <ul>
-            <li>Paloma Valdez-Marsh</li>
-            <li>2023</li>
-        </ul>
-
+    <footer class="footer text-slate-50 bg-slate-900">
+      <ul class="container max-w-screen mx-auto items-center flex justify-between p-4">
+          <li>Paloma Valdez-Marsh</li>
+          <li>2023</li>
+      </ul>
     </footer>
     <script src="form.js"></script>
 </body>
