@@ -9,40 +9,41 @@
 </head>
 <body class="font-sans">
     <main class="flex flex-col h-screen justify-between relative">
-        <div class="flex flex-col sticky top-0 bg-white">
-            <header class="">
-                <nav class="">
-                    <ul class="flex sm-flex-col gap-5 font-bold text-blue-600 p-3 bg-green-300 pl-6">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="form.html">Get Started</a></li>
-                        <li><a href="about.html">About</a></li>
-                    </ul>
-                    <h1 class="text-slate-900 text-center text-3xl font-bold align-middle mt-4 mb-6">Budget Jars</h1>
-                </nav>           
-            </header>
-
-            <div class="" id="manage">
-                <form class="flex p-2 flex-col items-center">
-                    <div class="py-5">
-                        <label>Choose a jar:</label>
-                        <select class="options border" id="category">
-                         <!-- see script -->
-                        </select>
-                    </div>
-                    <div class="flex items-center">
-                        <label>Amount</label>
-                        <input class="border border-slate-700 text-center mx-3" type="number" id="amt">
-                        <div class="buttons flex items-center justify-center ">
-                            <button class='text-5xl bg-green-300 border border-black rounded-md px-3 mx-3 pt-0 pb-1'type="submit" id="depositButton"> + </button>
-                            <button class='text-5xl bg-red-300 border border-black rounded-md px-4 mx-3 pt-0 pb-1'type="submit" id="spendButton"> - </button>
+        <div class="content">
+            <div class="flex flex-col sticky top-0 bg-white">
+                <header class="">
+                    <nav class="">
+                        <ul class="flex sm-flex-col gap-5 font-bold text-blue-600 p-3 bg-green-300 pl-6">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="form.html">Get Started</a></li>
+                            <li><a href="about.html">About</a></li>
+                        </ul>
+                        <h1 class="text-slate-900 text-center text-3xl font-bold align-middle mt-4 mb-6">Budget Jars</h1>
+                    </nav>
+                </header>
+                <div class="" id="manage">
+                    <form class="flex p-2 flex-col items-center">
+                        <div class="py-5">
+                            <label>Choose a jar:</label>
+                            <select class="options border" id="category">
+                             <!-- see script -->
+                            </select>
                         </div>
-                    </div>
-                </form>
+                        <div class="flex items-center">
+                            <label>Amount</label>
+                            <input class="border border-slate-700 text-center mx-3" type="number" id="amt">
+                            <div class="buttons flex items-center justify-center ">
+                                <button class='text-5xl bg-green-300 border border-black rounded-md px-3 mx-3 pt-0 pb-1'type="submit" id="depositButton"> + </button>
+                                <button class='text-5xl bg-red-300 border border-black rounded-md px-4 mx-3 pt-0 pb-1'type="submit" id="spendButton"> - </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
+            <!-- ---------------------------------------------------------- -->
+            <div class=" container mx-auto flex flex-col justify-center items-center gap-y-5 py-5 sm:flex sm:flex-row sm:space-x-5 sm:items-stretch" id="jars"></div>
+            <!-- ---------------------------------------------------------- -->
         </div>
-        <!-- ---------------------------------------------------------- -->
-        <div class=" flex flex-col justify-center items-center gap-y-5 py-5 sm:flex sm:flex-row sm:space-x-5" id="jars"></div>
-        <!-- ---------------------------------------------------------- -->
     
         <!-- FOOTER ---------------------------------------------------------- -->
         <footer class="footer text-slate-50 bg-slate-900">
