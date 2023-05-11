@@ -8,6 +8,10 @@ To use Budget Jars, click on the Get Started link and fill out the budget sheet.
 
 If you get to the end of the month before you get to the end of the jars, you are on track!
 
+## [Wireframes](https://www.figma.com/file/MTpkeNvXTOuMtDOaXqBFPZ/Budget-Jars?type=design&node-id=0%3A1&t=gz5gSWeqA47Wb9nh-1)
+
+## [Prototype](https://www.figma.com/proto/MTpkeNvXTOuMtDOaXqBFPZ/Budget-Jars?type=design&node-id=10-33&scaling=scale-down&page-id=0%3A1&starting-point-node-id=10%3A33)
+
 ## Note:
 Still working on responsiveness and accessibility.
 I lost the responsiveness to the levels in the jars, I tried to translate it to Tailwind, but no luck so far.
