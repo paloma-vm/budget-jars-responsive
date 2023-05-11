@@ -18,6 +18,9 @@ I lost the responsiveness to the levels in the jars, I tried to translate it to 
 I am working on the functionality of the budget page.
 I am also working on getting the jars to appear if there is a new user/nothing stored in local storage.
 ## TODO:
+- fix tailwind for 
+    - responsive levels bg color
+    - compound rounded bottom edges of jar level
 - use templates for Nav/Footer
 - I would like to add more styling as well and make it look better.
 - add progress images to README
