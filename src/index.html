@@ -23,18 +23,18 @@
 
             <div class="" id="manage">
                 <form class="flex p-2 flex-col items-center">
-                    <div>
+                    <div class="py-5">
                         <label>Choose a jar:</label>
-                        <select class="options" id="category">
+                        <select class="options border" id="category">
                          <!-- see script -->
                         </select>
                     </div>
-                    <div class="flex">
+                    <div class="flex items-center">
                         <label>Amount</label>
-                        <input class="bg-orange-400 text-center" type="number" id="amt">
-                        <div class="buttons">
-                            <button class='text-5xl bg-green-300'type="submit" id="depositButton"> + </button>
-                            <button class='text-5xl bg-red-300'type="submit" id="spendButton"> - </button>
+                        <input class="border border-slate-700 text-center mx-3" type="number" id="amt">
+                        <div class="buttons flex items-center justify-center ">
+                            <button class='text-5xl bg-green-300 border border-black rounded-md px-3 mx-3 pt-0 pb-1'type="submit" id="depositButton"> + </button>
+                            <button class='text-5xl bg-red-300 border border-black rounded-md px-4 mx-3 pt-0 pb-1'type="submit" id="spendButton"> - </button>
                         </div>
                     </div>
                 </form>
@@ -43,7 +43,8 @@
         <!-- ---------------------------------------------------------- -->
         <div class=" flex flex-col justify-center items-center gap-y-5 py-5 sm:flex sm:flex-row sm:space-x-5" id="jars"></div>
         <!-- ---------------------------------------------------------- -->
-    <!-- FOOTER ---------------------------------------------------------- -->
+    
+        <!-- FOOTER ---------------------------------------------------------- -->
         <footer class="footer text-slate-50 bg-slate-900">
             <ul class="container max-w-screen mx-auto items-center flex justify-between p-4">
                 <li>Paloma Valdez-Marsh</li>
@@ -51,6 +52,7 @@
             </ul>
         </footer>
     </main>
+    
     <script src="main.js" type="module"></script>
 </body>
 </html>

@@ -9,7 +9,8 @@ To use Budget Jars, click on the Get Started link and fill out the budget sheet.
 If you get to the end of the month before you get to the end of the jars, you are on track!
 
 ## Note:
-
+Still working on responsiveness and accessibility.
+I lost the responsiveness to the levels in the jars, I tried to translate it to Tailwind, but no luck so far.
 I am working on the functionality of the budget page.
 I am also working on getting the jars to appear if there is a new user/nothing stored in local storage.
 ## TODO:

@@ -74,15 +74,15 @@ function showJars() {
     const startLevel = (1 - ((startBal - currentBal) / startBal)) * 100
 
     jarsDisplay += 
-    `<div class='text-slate-900 text-center relative flex flex-col justify-center items-center box-border h-full w-5/6' id='jar-${i}'>
+    `<div class='text-slate-900 text-center relative flex flex-col justify-center items-center box-border h-full text-lg' id='jar-${i}'>
       <img src='empty-jar.png'>
       <div class=' bg-red-300 flex w-full h-[80%]' border absolute left-0 bottom-0>
-        <div class='bg-green-300 opacity-40 border w-[96%] h-[80%] absolute left-[2%] bottom-0 rounded-bl-[7rem] rounded-br-[7rem] !important'></div>
+        <div class='bg-green-300 opacity-40 border w-[96%] h-[72%] absolute left-[2%] bottom-0 rounded-bl-[7rem] rounded-br-[7rem] !important'></div>
       </div>
-      <p class='absolute inset-5'>original balance:</p>
-      <p class='absolute inset-10'>$${startBal}</p>
-      <h3 class='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2'>${label}</h3>
-      <h2 class='absolute left-1/2 top-1/2 -translate-x-1/2 translate-y-2'>$${currentBal}</h2>
+      <p class='absolute top-10'>original balance:</p>
+      <p class='absolute top-12 pt-5'>$${startBal}</p>
+      <h3 class='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-bold text-2xl pb-5 sm:text-lg'>${label}</h3>
+      <h2 class='absolute left-1/2 top-1/2 -translate-x-1/2 translate-y-2 font-bold text-2xl sm:text-lg'>$${currentBal}</h2>
     </div>`
   }
   jarList.innerHTML = jarsDisplay
