@@ -13,6 +13,7 @@ If you get to the end of the month before you get to the end of the jars, you ar
 I am working on the functionality of the budget page.
 I am also working on getting the jars to appear if there is a new user/nothing stored in local storage.
 ## TODO:
-- use Jinja templates for Nav/Footer
+- use templates for Nav/Footer
 - I would like to add more styling as well and make it look better.
+- add progress images to README
  

@@ -73,11 +73,12 @@ function showJars() {
     const { label, startBal, currentBal } = jars[i]
     const startLevel = (1 - ((startBal - currentBal) / startBal)) * 100
 
-    jarsDisplay += `<div class='text-slate-900 text-center relative flex justify-center' id='jar-${i}'>
+    jarsDisplay += 
+    `<div class='text-slate-900 text-center relative flex flex-col justify-center items-center box-border h-full w-5/6' id='jar-${i}'>
       <img src='empty-jar.png'>
-        <div class='startLevel-wrapper'>
-          <div class='bg-green-300 h-5/6' style='height: ${startLevel}%'></div>
-        </div>
+      <div class=' bg-red-300 flex w-full h-[80%]' border absolute left-0 bottom-0>
+        <div class='bg-green-300 opacity-40 border w-[96%] h-[80%] absolute left-[2%] bottom-0 rounded-bl-[7rem] rounded-br-[7rem] !important'></div>
+      </div>
       <p class='absolute inset-5'>original balance:</p>
       <p class='absolute inset-10'>$${startBal}</p>
       <h3 class='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2'>${label}</h3>
@@ -112,33 +113,8 @@ function highlightDiv() {
 
 let savedData
 let savedJarsData
-// function initializeJars() {
-//   if (localStorage.key(formId)) {
-//     savedData = JSON.parse(localStorage.getItem(formId))
-  
-//     makeJar('Transportation', parseFloat(savedData.transportationAmt))
-//     makeJar('Food', parseFloat(savedData.foodAmt))
-//     makeJar('Entertainment', parseFloat(savedData.entertainmentAmt))
-//     makeJar('Clothes/gifts', parseFloat(savedData.clothesGiftsAmt))
-//     makeJar('Everything else', parseFloat(savedData.everythingElseAmt))
-//   }
-// }
-
 function initializeJars() {
-  /** A function to create the jars */
-  if (localStorage.key('jars')) {
-    savedJarsData = JSON.parse(localStorage.getItem('jars'))
-    if (savedJarsData !== undefined) {
-    /** I am sure there is a more DRY way to do this, but it works and I am short on time */
-    makeJar('Transportation', parseFloat(savedJarsData[0].startBal), parseFloat(savedJarsData[0].currentBal))
-    makeJar('Food', parseFloat(savedJarsData[1].startBal), parseFloat(savedJarsData[1].currentBal))
-    makeJar('Entertainment', parseFloat(savedJarsData[2].startBal), parseFloat(savedJarsData[2].currentBal))
-    makeJar('Clothes/gifts', parseFloat(savedJarsData[3].startBal), parseFloat(savedJarsData[3].currentBal))
-    makeJar('Everything else', parseFloat(savedJarsData[4].startBal), parseFloat(savedJarsData[4].currentBal))
-    }
-  }
-  
-  else if (localStorage.key(formId)) {
+  if (localStorage.key(formId)) {
     savedData = JSON.parse(localStorage.getItem(formId))
   
     makeJar('Transportation', parseFloat(savedData.transportationAmt))
@@ -146,16 +122,43 @@ function initializeJars() {
     makeJar('Entertainment', parseFloat(savedData.entertainmentAmt))
     makeJar('Clothes/gifts', parseFloat(savedData.clothesGiftsAmt))
     makeJar('Everything else', parseFloat(savedData.everythingElseAmt))
-    localStorage.setItem('jars', JSON.stringify(jars))
-  } // makeJar('Transportation', parseFloat(0), parseFloat(0))
-}    // makeJar('Food', 0, 0)
+  }
+}
+
+// function initializeJars() {
+//   /** A function to create the jars */
+//   if (localStorage.key('jars')) {
+//     savedJarsData = JSON.parse(localStorage.getItem('jars'))
+//     if (savedJarsData !== undefined) {
+//     /** I am sure there is a more DRY way to do this, but it works and I am short on time */
+//     makeJar('Transportation', parseFloat(savedJarsData[0].startBal), parseFloat(savedJarsData[0].currentBal))
+//     makeJar('Food', parseFloat(savedJarsData[1].startBal), parseFloat(savedJarsData[1].currentBal))
+//     makeJar('Entertainment', parseFloat(savedJarsData[2].startBal), parseFloat(savedJarsData[2].currentBal))
+//     makeJar('Clothes/gifts', parseFloat(savedJarsData[3].startBal), parseFloat(savedJarsData[3].currentBal))
+//     makeJar('Everything else', parseFloat(savedJarsData[4].startBal), parseFloat(savedJarsData[4].currentBal))
+//     }
+//   }
+  
+//   else if (localStorage.key(formId)) {
+//     savedData = JSON.parse(localStorage.getItem(formId))
+  
+//     makeJar('Transportation', parseFloat(savedData.transportationAmt))
+//     makeJar('Food', parseFloat(savedData.foodAmt))
+//     makeJar('Entertainment', parseFloat(savedData.entertainmentAmt))
+//     makeJar('Clothes/gifts', parseFloat(savedData.clothesGiftsAmt))
+//     makeJar('Everything else', parseFloat(savedData.everythingElseAmt))
+//     localStorage.setItem('jars', JSON.stringify(jars))
+//   }
+// }   
+
+   // makeJar('Transportation', parseFloat(0), parseFloat(0))
+    // makeJar('Food', 0, 0)
     // makeJar('Entertainment', 0, 0)
     // makeJar('Clothes/gifts', 0, 0)
     // makeJar('Everything else', 0, 0)
     // localStorage.setItem('jars', JSON.stringify(jars))
     // have a pop-up directing user to Get Started
     // jarList.innerHTML = 'use the Get Started link to make a budget'
-
   
 
   // } else if (localStorage.key('jars') == undefined) {

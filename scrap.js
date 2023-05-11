@@ -43,3 +43,4 @@ function updateJars() {
 
 class="w-1/2 sm:w-max"
 [&_div]:flex w-full justify-between ali
+// <div class='bg-green-300 h-5/6' style='height: ${startLevel}%'></div>

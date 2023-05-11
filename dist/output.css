@@ -564,6 +564,10 @@ video {
   position: relative;
 }
 
+.sticky {
+  position: sticky;
+}
+
 .inset-10 {
   inset: 2.5rem;
 }
@@ -572,20 +576,36 @@ video {
   inset: 1.25rem;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
+.left-0 {
+  left: 0px;
+}
+
 .left-1\/2 {
   left: 50%;
+}
+
+.top-0 {
+  top: 0px;
 }
 
 .top-1\/2 {
   top: 50%;
 }
 
-.col-span-2 {
-  grid-column: span 2 / span 2;
+.left-\[2\%\] {
+  left: 2%;
 }
 
 .col-span-1 {
   grid-column: span 1 / span 1;
+}
+
+.col-span-2 {
+  grid-column: span 2 / span 2;
 }
 
 .mx-auto {
@@ -599,6 +619,10 @@ video {
 
 .mt-4 {
   margin-top: 1rem;
+}
+
+.box-border {
+  box-sizing: border-box;
 }
 
 .block {
@@ -617,16 +641,28 @@ video {
   height: 80%;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .h-screen {
   height: 100vh;
 }
 
-.h-5\/6 {
-  height: 83.333333%;
-}
-
 .w-full {
   width: 100%;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-5\/6 {
+  width: 83.333333%;
+}
+
+.w-\[96\%\] {
+  width: 96%;
 }
 
 .-translate-x-1\/2 {
@@ -642,14 +678,6 @@ video {
 .translate-y-2 {
   --tw-translate-y: 0.5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.grid-cols-1 {
-  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .grid-cols-3 {
@@ -680,6 +708,65 @@ video {
   row-gap: 1.25rem;
 }
 
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
+.rounded-b-md {
+  border-bottom-right-radius: 0.375rem;
+  border-bottom-left-radius: 0.375rem;
+}
+
+.rounded-b-3xl {
+  border-bottom-right-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+}
+
+.rounded-b-full {
+  border-bottom-right-radius: 9999px;
+  border-bottom-left-radius: 9999px;
+}
+
+.rounded-ee-3xl {
+  border-end-end-radius: 1.5rem;
+}
+
+.rounded-bl-\[3\.5em\] {
+  border-bottom-left-radius: 3.5em;
+}
+
+.rounded-bl-\[3\.5rem\] {
+  border-bottom-left-radius: 3.5rem;
+}
+
+.rounded-bl-\[4rem\] {
+  border-bottom-left-radius: 4rem;
+}
+
+.rounded-bl-\[5rem\] {
+  border-bottom-left-radius: 5rem;
+}
+
+.rounded-bl-\[6rem\] {
+  border-bottom-left-radius: 6rem;
+}
+
+.rounded-bl-\[6\.5rem\] {
+  border-bottom-left-radius: 6.5rem;
+}
+
+.rounded-br-\[6\.5rem\] {
+  border-bottom-right-radius: 6.5rem;
+}
+
+.rounded-bl-\[7rem\] {
+  border-bottom-left-radius: 7rem;
+}
+
+.rounded-br-\[7rem\] {
+  border-bottom-right-radius: 7rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -689,9 +776,28 @@ video {
   background-color: rgb(134 239 172 / var(--tw-bg-opacity));
 }
 
+.bg-orange-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 146 60 / var(--tw-bg-opacity));
+}
+
+.bg-red-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
+}
+
 .bg-slate-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 .p-3 {
@@ -712,6 +818,11 @@ video {
   padding-bottom: 0.5rem;
 }
 
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
 .pl-6 {
   padding-left: 1.5rem;
 }
@@ -724,9 +835,18 @@ video {
   vertical-align: middle;
 }
 
+.font-sans {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .font-bold {
@@ -748,6 +868,10 @@ video {
   color: rgb(15 23 42 / var(--tw-text-opacity));
 }
 
+.opacity-40 {
+  opacity: 0.4;
+}
+
 @media (min-width: 640px) {
   .sm\:flex {
     display: flex;
@@ -764,36 +888,24 @@ video {
   }
 }
 
-.\[\&_div\]\:flex div {
-  display: flex;
-}
-
 .\[\&_div\]\:grid div {
   display: grid;
-}
-
-.\[\&_div\]\:grid-cols-3 div {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .\[\&_div\]\:grid-cols-2 div {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.\[\&_div_input\]\:border div input {
-  border-width: 1px;
-}
-
 .\[\&_div_label\]\:col-span-1 div label {
   grid-column: span 1 / span 1;
 }
 
-.\[\&_div_label\]\:col-span-2 div label {
-  grid-column: span 2 / span 2;
+.\[\&_div_label\]\:border div label {
+  border-width: 1px;
 }
 
-.\[\&_input\]\:col-span-2 input {
-  grid-column: span 2 / span 2;
+.\[\&_h3\]\:font-bold h3 {
+  font-weight: 700;
 }
 
 .\[\&_input\]\:col-span-1 input {
@@ -802,8 +914,4 @@ video {
 
 .\[\&_input\]\:border input {
   border-width: 1px;
-}
-
-.\[\&_label\]\:col-span-1 label {
-  grid-column: span 1 / span 1;
 }
