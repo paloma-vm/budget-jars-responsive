@@ -8,39 +8,43 @@
     <link href="/dist/output.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="">
-            <ul class="flex sm-flex-col gap-5 font-bold text-blue-600 p-3 bg-green-300 pl-6">
-                <li><a href="#">Home</a></li>
-                <li><a href="form.html">Get Started</a></li>
-                <li><a href="about.html">About</a></li>
+    <main class="flex flex-col h-screen justify-between">
+        <div class="content">
+            <header>
+                <nav class="">
+                    <ul class="flex sm-flex-col gap-5 font-bold text-[#0E2F7C] p-3 bg-green-300 pl-6">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="form.html">Get Started</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                    <h1 class="text-slate-900 text-center text-3xl font-bold align-middle mt-4 mb-6">Budget Jars</h1>
+                </nav>
+            </header>
+            <!-- ---------------------------------------------------------- -->
+            <div class="container mx-auto flex flex-col w-[90%]">
+                <p class="about">Budget Jars is an app for those who want to use the jar system for budgeting
+                    and reducing debt, but don't want to have to use actual cash.</p>
+                <p class="about">
+                    The jar system keeps track of variable spending
+                    for the time period (usually a month or a week).
+                    This digital version of the jar system is easy to use.</p>
+                <p class="about">
+                    To use Budget Jars, click on the Get Started link and
+                    fill out the budget sheet.  Then your Jars will be created
+                     and you can start saving!</p>
+                <p class="about">
+                    If you get to the end of the month before you get to the
+                     end of the jars, you are on track!</p>
+            </div>
+        </div>
+        <!-- ---------------------------------------------------------- -->
+        <footer class="footer text-slate-50 bg-slate-900">
+            <ul class="container max-w-screen mx-auto items-center flex justify-between p-4">
+                <li>Paloma Valdez-Marsh</li>
+                <li>2023</li>
             </ul>
-            <h1 class="text-slate-900 text-center text-3xl font-bold align-middle mt-4 mb-6">Budget Jars</h1>
-        </nav>           
-    </header>
-
-    <!-- ---------------------------------------------------------- -->
-    <p class="about">Budget Jars is an app for those who want to use the jar system for budgeting
-        and reducing debt, but don't want to have to use actual cash.</p>
-    <p class="about"> 
-        The jar system keeps track of variable spending
-        for the time period (usually a month or a week).
-        This digital version of the jar system is easy to use.</p>
-    <p class="about">
-        To use Budget Jars, click on the Get Started link and 
-        fill out the budget sheet.  Then your Jars will be created
-         and you can start saving!</p>
-    <p class="about">   
-        If you get to the end of the month before you get to the
-         end of the jars, you are on track!</p>
-    <!-- ---------------------------------------------------------- -->
-
-    <footer class="footer text-slate-50 bg-slate-900">
-        <ul class="container max-w-screen mx-auto items-center flex justify-between p-4">
-            <li>Paloma Valdez-Marsh</li>
-            <li>2023</li>
-        </ul>
-    </footer>
+        </footer>
+    </main>
     <script src="main.js" type="module"></script>
 </body>
 </html>

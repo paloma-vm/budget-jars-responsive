@@ -556,10 +556,6 @@ video {
   }
 }
 
-.fixed {
-  position: fixed;
-}
-
 .absolute {
   position: absolute;
 }
@@ -602,14 +598,6 @@ video {
 
 .top-12 {
   top: 3rem;
-}
-
-.top-5 {
-  top: 1.25rem;
-}
-
-.top-4 {
-  top: 1rem;
 }
 
 .col-span-1 {
@@ -681,6 +669,18 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-80 {
+  width: 20rem;
+}
+
+.w-5\/6 {
+  width: 83.333333%;
+}
+
+.w-\[90\%\] {
+  width: 90%;
 }
 
 .-translate-x-1\/2 {
@@ -780,11 +780,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-red-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
-}
-
 .p-2 {
   padding: 0.5rem;
 }
@@ -869,11 +864,6 @@ video {
   line-height: 1.75rem;
 }
 
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
 .font-bold {
   font-weight: 700;
 }
@@ -893,6 +883,16 @@ video {
   color: rgb(15 23 42 / var(--tw-text-opacity));
 }
 
+.text-blue-950 {
+  --tw-text-opacity: 1;
+  color: rgb(23 37 84 / var(--tw-text-opacity));
+}
+
+.text-\[\#0E2F7C\] {
+  --tw-text-opacity: 1;
+  color: rgb(14 47 124 / var(--tw-text-opacity));
+}
+
 .opacity-40 {
   opacity: 0.4;
 }
@@ -902,44 +902,32 @@ video {
     top: 1rem;
   }
 
-  .sm\:top-6 {
-    top: 1.5rem;
-  }
-
   .sm\:top-8 {
     top: 2rem;
+  }
+
+  .sm\:ml-5 {
+    margin-left: 1.25rem;
   }
 
   .sm\:flex {
     display: flex;
   }
 
-  .sm\:w-\[80\%\] {
-    width: 80%;
-  }
-
-  .sm\:w-\[90\%\] {
-    width: 90%;
-  }
-
   .sm\:w-full {
     width: 100%;
+  }
+
+  .sm\:w-1\/2 {
+    width: 50%;
   }
 
   .sm\:flex-row {
     flex-direction: row;
   }
 
-  .sm\:items-center {
-    align-items: center;
-  }
-
   .sm\:items-stretch {
     align-items: stretch;
-  }
-
-  .sm\:justify-items-stretch {
-    justify-items: stretch;
   }
 
   .sm\:space-x-5 > :not([hidden]) ~ :not([hidden]) {
@@ -989,4 +977,25 @@ video {
 
 .\[\&_input\]\:border input {
   border-width: 1px;
+}
+
+.\[\&_p\]\:flex p {
+  display: flex;
+}
+
+.\[\&_p\]\:w-\[80\%\] p {
+  width: 80%;
+}
+
+.\[\&_p\]\:items-center p {
+  align-items: center;
+}
+
+.\[\&_p\]\:justify-center p {
+  justify-content: center;
+}
+
+.\[\&_p\]\:text-lg p {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
