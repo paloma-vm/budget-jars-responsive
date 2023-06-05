@@ -3,14 +3,17 @@
   "version": "1.0.0",
   "description": "Final project ACS 2330",
   "main": "index.html",
+  "homepage": "https://paloma-vm.github.io/budget-jars-responsive",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+ 
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "tailwindcss": "^3.3.2"
   },
   "dependencies": {
