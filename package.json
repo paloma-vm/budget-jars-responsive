@@ -2,12 +2,10 @@
   "name": "budget-jars-responsive",
   "version": "1.0.0",
   "description": "Final project ACS 2330",
-  "main": "index.html",
-  "homepage": "https://paloma-vm.github.io/budget-jars-responsive",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
- 
   },
   "keywords": [],
   "author": "",
