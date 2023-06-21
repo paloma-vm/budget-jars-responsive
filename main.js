@@ -64,8 +64,6 @@ function makeJar(label, startBal, currentBal) {
 }
 
 
-
-
 // help from mood-shop assignment
 function showJars() {
   let jarsDisplay = ''
@@ -112,19 +110,7 @@ function highlightDiv() {
   jar0.classList.toggle('highlight');
 }
 
-let savedData
 let savedJarsData
-// function initializeJars() {
-//   if (localStorage.key(formId)) {
-//     savedData = JSON.parse(localStorage.getItem(formId))
-  
-//     makeJar('Transportation', parseFloat(savedData.transportationAmt))
-//     makeJar('Food', parseFloat(savedData.foodAmt))
-//     makeJar('Entertainment', parseFloat(savedData.entertainmentAmt))
-//     makeJar('Clothes/gifts', parseFloat(savedData.clothesGiftsAmt))
-//     makeJar('Everything else', parseFloat(savedData.everythingElseAmt))
-//   }
-// }
 
 function initializeJars() {
   /** A function to create the jars */
@@ -145,39 +131,14 @@ function initializeJars() {
   }
 }   
 
-   // makeJar('Transportation', parseFloat(0), parseFloat(0))
-    // makeJar('Food', 0, 0)
-    // makeJar('Entertainment', 0, 0)
-    // makeJar('Clothes/gifts', 0, 0)
-    // makeJar('Everything else', 0, 0)
-    // localStorage.setItem('jars', JSON.stringify(jars))
-    // have a pop-up directing user to Get Started
-    // jarList.innerHTML = 'use the Get Started link to make a budget'
-  
-
-  // } else if (localStorage.key('jars') == undefined) {
-  //     makeJar('Transportation', 0, 0)
-  //     makeJar('Food', 0, 0)
-  //     makeJar('Entertainment', 0, 0)
-  //     makeJar('Clothes/gifts', 0, 0)
-  //     makeJar('Everything else', 0, 0)
-
-  // }
-
-
-
-
-
 /**
  * A function to retrieve the form data and
  * use it to create the jar starting balance
  */
 const displayPage = () => {
-
   initializeJars()
   showJars()
   jarSelect()
- 
 }
 
 displayPage() // create jars and show deposit/spend input 

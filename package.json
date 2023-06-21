@@ -2,10 +2,10 @@
   "name": "budget-jars-responsive",
   "version": "1.0.0",
   "description": "Final project ACS 2330",
-  "main": "main.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+    "start": "npx tailwindcss -i ./input.css -o ./dist/output.css --watch"
   },
   "keywords": [],
   "author": "",
