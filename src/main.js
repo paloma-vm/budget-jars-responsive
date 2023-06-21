@@ -114,33 +114,8 @@ function highlightDiv() {
 
 let savedData
 let savedJarsData
-function initializeJars() {
-  if (localStorage.key(formId)) {
-    savedData = JSON.parse(localStorage.getItem(formId))
-  
-    makeJar('Transportation', parseFloat(savedData.transportationAmt))
-    makeJar('Food', parseFloat(savedData.foodAmt))
-    makeJar('Entertainment', parseFloat(savedData.entertainmentAmt))
-    makeJar('Clothes/gifts', parseFloat(savedData.clothesGiftsAmt))
-    makeJar('Everything else', parseFloat(savedData.everythingElseAmt))
-  }
-}
-
 // function initializeJars() {
-//   /** A function to create the jars */
-//   if (localStorage.key('jars')) {
-//     savedJarsData = JSON.parse(localStorage.getItem('jars'))
-//     if (savedJarsData !== undefined) {
-//     /** I am sure there is a more DRY way to do this, but it works and I am short on time */
-//     makeJar('Transportation', parseFloat(savedJarsData[0].startBal), parseFloat(savedJarsData[0].currentBal))
-//     makeJar('Food', parseFloat(savedJarsData[1].startBal), parseFloat(savedJarsData[1].currentBal))
-//     makeJar('Entertainment', parseFloat(savedJarsData[2].startBal), parseFloat(savedJarsData[2].currentBal))
-//     makeJar('Clothes/gifts', parseFloat(savedJarsData[3].startBal), parseFloat(savedJarsData[3].currentBal))
-//     makeJar('Everything else', parseFloat(savedJarsData[4].startBal), parseFloat(savedJarsData[4].currentBal))
-//     }
-//   }
-  
-//   else if (localStorage.key(formId)) {
+//   if (localStorage.key(formId)) {
 //     savedData = JSON.parse(localStorage.getItem(formId))
   
 //     makeJar('Transportation', parseFloat(savedData.transportationAmt))
@@ -148,9 +123,27 @@ function initializeJars() {
 //     makeJar('Entertainment', parseFloat(savedData.entertainmentAmt))
 //     makeJar('Clothes/gifts', parseFloat(savedData.clothesGiftsAmt))
 //     makeJar('Everything else', parseFloat(savedData.everythingElseAmt))
-//     localStorage.setItem('jars', JSON.stringify(jars))
 //   }
-// }   
+// }
+
+function initializeJars() {
+  /** A function to create the jars */
+  //if (localStorage.key('jars')) {
+  if (localStorage.getItem('jars')) {
+    savedJarsData = JSON.parse(localStorage.getItem('jars'))
+    for (let i = 0; i < savedJarsData.length; i++) {
+      const { label, startBal, currentBal } = savedJarsData[i]
+      makeJar(label, parseFloat(startBal), parseFloat(currentBal))
+    }
+  } else {
+    makeJar('Transportation', 0, 0)
+    makeJar('Food', 0, 0)
+    makeJar('Entertainment', 0, 0)
+    makeJar('Clothes/gifts', 0, 0)
+    makeJar('Everything else', 0, 0)
+    // localStorage.setItem('jars', JSON.stringify(jars))
+  }
+}   
 
    // makeJar('Transportation', parseFloat(0), parseFloat(0))
     // makeJar('Food', 0, 0)
