@@ -93,8 +93,11 @@ function drawChart() {
           .ticks(10) // change number of ticks dynamically based on the data
           .tickFormat(d3.format(".0f")) // Format the axis numbers
           .tickSizeInner(-width + marginLeft + marginRight)
-          .tickValues(d3.range(0, d3.max(jars, d => d.currentBal) + 50, 50))
-      ) // moved the round to here
+          // .tickValues(d3.range(0, d3.max(jars, d => d.currentBal) + 50, 50))
+          .tickValues(d3.range(0, d3.max(jars, d => Math.max(d.startBal, d.currentBal)) + 50, 50)) // picks the higher value
+
+
+      ) // moved the round bracket to here
 
   // make the horizontal ticks dashed
   leftAxis.selectAll("line")
