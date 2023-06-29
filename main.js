@@ -23,29 +23,29 @@ function initializeJars() {
             const { label, startBal, currentBal } = savedJarsData[i]
             makeJar(label, parseFloat(startBal), parseFloat(currentBal))
         }
-    // } else {
-    //     makeJar('Transportation', 0, 0)
-    //     makeJar('Food', 150, 50)
-    //     makeJar('Entertainment', 250, 500)
-    //     makeJar('Clothes/gifts', 250, 37)
-    //     makeJar('Everything else', 250, 300)
-    //     // localStorage.setItem('jars', JSON.stringify(jars))
-    // }
     } else {
-        makeJar('Transportation', 300, 0)
-        makeJar('Food', 0, 0)
-        makeJar('Entertainment', 0, 0)
-        makeJar('Clothes/gifts', 0, 0)
-        makeJar('Everything else', 0, 0)
-        localStorage.setItem('jars', JSON.stringify(jars))
-  }
+        makeJar('Transportation', 200, 10)
+        makeJar('Food', 150, 50)
+        makeJar('Entertainment', 250, 500)
+        makeJar('Clothes/gifts', 250, 37)
+        makeJar('Everything else', 250, 300)
+        // localStorage.setItem('jars', JSON.stringify(jars))
+    }
+  //   } else {
+  //       makeJar('Transportation', 300, 0)
+  //       makeJar('Food', 0, 0)
+  //       makeJar('Entertainment', 0, 0)
+  //       makeJar('Clothes/gifts', 0, 0)
+  //       makeJar('Everything else', 0, 0)
+  //       localStorage.setItem('jars', JSON.stringify(jars))
+  // }
 } 
 
 // Declare the chart dimensions and margins.
 const marginTop = 20;
 const marginRight = 30;
-const marginBottom = 30;
-const marginLeft = 100;
+const marginBottom = 70;
+const marginLeft = 80;
 const width = 900;
 const height = 400;
 let x
@@ -102,6 +102,28 @@ function drawChart() {
   leftAxis.selectAll(".tick text")
       .attr("x", -10)
       .attr("dy", 4)
+
+  // add axis labels
+  // x label
+  svg
+    .append('text')
+    .attr('x', (width / 2) + marginLeft)
+    .attr('y', height - 20)
+    .attr('text-anchor', 'middle')
+    .style('font-family', 'Helvetica')
+    .style('font-size', '18px')
+    .text('Jars')
+  // y label
+  svg
+    .append('text')
+    // .attr('x', 10)
+    // .attr('y', height / 2)
+    .attr('transform', 'translate(30, ' + height / 2 + ')rotate(-90)')
+    .attr('text-anchor', 'middle')
+    .style('font-family', 'Helvetica')
+    .style('font-size', '18px')
+    .text('Dollars')
+
 
   // Append the SVG element.
   const container = d3.select('#container')

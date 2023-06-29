@@ -19,7 +19,7 @@ jars[2].startBal = parseFloat(savedData.entertainmentAmt)
 jars[3].startBal = parseFloat(savedData.clothesGiftsAmt)
 jars[4].startBal = parseFloat(savedData.everythingElseAmt)
 
-function updateJars() {
+function Jars() {
   // if (localStorage.key('jars')) {
   //   savedJarsData = JSON.parse(localStorage.getItem('jars'))
   // }
