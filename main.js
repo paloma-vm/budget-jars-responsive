@@ -26,7 +26,7 @@ function initializeJars() {
     } else {
         makeJar('Transportation', 200, 10)
         makeJar('Food', 150, 50)
-        makeJar('Entertainment', 250, 500)
+        makeJar('Entertainment', 250, 200)
         makeJar('Clothes/gifts', 250, 37)
         makeJar('Everything else', 250, 300)
         // localStorage.setItem('jars', JSON.stringify(jars))
@@ -42,7 +42,7 @@ function initializeJars() {
 } 
 
 // Declare the chart dimensions and margins.
-const marginTop = 20;
+const marginTop = 100;
 const marginRight = 30;
 const marginBottom = 70;
 const marginLeft = 80;
@@ -64,7 +64,9 @@ function drawChart() {
   // Declare the y (vertical position) scale.
   y = d3.scaleLinear()
       // .domain([0, 500])
-      .domain([0, d3.max(jars, d => d.startBal)]) // changed this for changing max
+      // .domain([0, d3.max(jars, d => d.startBal)]) // changed this for changing max
+      .domain([0, d3.max(jars, d => Math.max(d.startBal, d.currentBal))]) // this allows for currentBal to be greater than startBal (help from ChatGPT)
+
       .range([height - marginBottom, marginTop])
       // .range([marginTop, height])
       // .range([height, marginTop])
@@ -123,7 +125,19 @@ function drawChart() {
     .style('font-family', 'Helvetica')
     .style('font-size', '18px')
     .text('Dollars')
-
+  
+  // LEGEND (decided not to use this for now)
+  // const legend = svg
+  //   .append('g')
+  //   .selectAll('rect')
+  //   .data(jars)
+  //   .enter()
+  //   .append('rect')
+  //   .attr('x', 875)
+  //   .attr('y', (d, i) => 20 * i + 50)
+  //   .attr('fill', d => colorScale(d.label))
+  //   .attr('width', 10)
+  //   .attr('height', 10)
 
   // Append the SVG element.
   const container = d3.select('#container')
@@ -157,8 +171,9 @@ function drawChart() {
       .attr('y', d => y(d.startBal))
       .attr('width', x.bandwidth())
       .attr('height', d => height - marginBottom -y(d.startBal))
-      .attr('fill', 'bisque')
-      .attr('opacity', 0.45)
+      // .attr('fill', 'bisque')
+      .attr('fill', d => colorScale(d.label))
+      .attr('opacity', 0.20)
 }
 
 function updateChart() {
